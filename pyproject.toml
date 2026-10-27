@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "todd-php-phprootscan"
+version = "0.1.0"
+description = "沿 composer 依赖链追溯每个包的来源、许可与被引用位置，标出可替换的根依赖"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "todd-php" }]
+keywords = ["analysis", "observability", "evaluation", "rag"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Topic :: Utilities",
+]
+
+[project.urls]
+Homepage = "https://todd-php.github.io"
+Repository = "https://github.com/todd-php/phprootscan"
+Issues = "https://github.com/todd-php/phprootscan/issues"
+
+[project.scripts]
+phprootscan = "phprootscan:main"
+
+[tool.setuptools]
+py-modules = ["phprootscan"]
